@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Engineer.destroy_all
+Studio.destroy_all
+Schedule.destroy_all
 
 50.times do 
     User.create(name: Faker::Artist.name, email: Faker::Internet.email, password_digest: "abc123")
