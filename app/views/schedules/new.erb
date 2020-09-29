@@ -1,0 +1,11 @@
+<h1>Book time with us!</h1>
+
+<%= form_for @schedule do |s| %>
+    <%= s.label :studio_id %>
+    <%= s.collection_select :studio_id, @studio, :id, :name %>
+    <%= s.label :engineer_id %>
+    <%= s.collection_select :engineer_id, @engineer, :id, :name %>
+    <%= s.label :time %>
+    <%= s.number_field :time %>
+    <%= s.submit "Create Appointment" %>
+<% end %>
