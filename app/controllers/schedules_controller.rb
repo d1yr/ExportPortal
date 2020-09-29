@@ -10,6 +10,8 @@ class SchedulesController < ApplicationController
 
     def new
         @schedule = Schedule.new
+        @studios = Studio.all
+        @engineers = Engineer.all
     end
 
     def create 
@@ -24,23 +26,27 @@ class SchedulesController < ApplicationController
 
 
     def edit
+        @studios = Studio.all
+        @engineers = Engineer.all
     end
 
     def update
         @schedule.update(schedule_params)
+        
     
         redirect_to schedule_path(@schedule)
     end
 
     def destroy 
         @schedule.destroy
+        redirect_to schedules_path
     end
         
     
     private 
     
     def find_schedule
-        @schedule = Schecule.find(params[:id])
+        @schedule = Schedule.find(params[:id])
     end
 
     def schedule_params

@@ -1,3 +1,8 @@
 <h1>Schedule Index</h1>
 
-<>
+<ul>
+<%@schedules.each do |s|%>
+<li> Date: <%=link_to s.date, schedule_path(s)%> Time reserved: <%=s.time%></li>
+<%end%>
+
+</ul>

@@ -2,10 +2,15 @@
 
 <%= form_for @schedule do |s| %>
     <%= s.label :studio_id %>
-    <%= s.collection_select :studio_id, @studio, :id, :name %>
+    <%= s.collection_select :studio_id, @studios, :id, :name %>
     <%= s.label :engineer_id %>
-    <%= s.collection_select :engineer_id, @engineer, :id, :name %>
+    <%= s.collection_select :engineer_id, @engineers, :id, :name %>
+    <br>
     <%= s.label :time %>
     <%= s.number_field :time %>
+    <br>
+    <%= s.label :date %>
+    <%= s.date_field :date %>
+    <br>
     <%= s.submit "Create Appointment" %>
 <% end %>

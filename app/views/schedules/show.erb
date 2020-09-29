@@ -1,0 +1,10 @@
+<h1>Appointment</h1>
+<h3>User: <%=@schedule.user.name%></h3>
+<ul>
+<li> Date: <%=@schedule.date%></li>
+<li>Time reserved: <%=@schedule.time%></li>
+</ul>
+
+<%= button_to "Edit", edit_schedule_path(@schedule.id), method: :get %>
+
+<%= button_to "Cancel", schedule_path(@schedule.id), method: :delete %>

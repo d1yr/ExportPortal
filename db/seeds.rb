@@ -23,5 +23,5 @@ end
 end
 
 70.times do
-    Schedule.create(user_id: User.all.sample.id, studio_id: Studio.all.sample.id, engineer_id: Engineer.all.sample.id, time: rand(1..10))
+    Schedule.create(user_id: User.all.sample.id, studio_id: Studio.all.sample.id, engineer_id: Engineer.all.sample.id, time: rand(1..10), date: Faker::Date.between(from: '2020-09-30', to: '2021-09-25'))
 end
