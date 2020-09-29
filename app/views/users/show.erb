@@ -2,3 +2,13 @@
 <ul>
 <li><%= @user.email %></li>
 </ul>
+<ul>
+<h3>Appointment Date(s)</h3>
+<%@user.schedules.each do |s|%>
+<li><%= s.date %></li>
+<% end%>
+</ul>
+
+<%= button_to "Edit", edit_user_path(@user.id), method: :get %>
+
+<%= button_to "Cancel", user_path(@user.id), method: :delete %>

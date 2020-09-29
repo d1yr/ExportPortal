@@ -39,7 +39,26 @@ class UsersController < ApplicationController
 
     def destroy 
         @user.destroy
-        redirect_to user_path
+        redirect_to users_path
+    end
+
+    def login
+    end
+
+    def handle_login
+        @user = User.find_by(name: params[:name])
+        if @user && @user.authenticate(params[:password])
+            session[:user] = @user.id
+            redirect_to users_path
+        else
+            flash[:message] = @user.errors.full_messages
+            redirect_to login_path
+        end
+    end
+    
+    def logout
+        session[:user] = nil
+        redirect_to login_path
     end
         
     

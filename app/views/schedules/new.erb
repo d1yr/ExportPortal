@@ -1,5 +1,11 @@
 <h1>Book time with us!</h1>
 
+<%if flash[:my_errors]%>
+    <%flash[:my_errors].each do |e|%>
+        <p><%=e%></p>
+     <%end%>
+<%end%>
+
 <%= form_for @schedule do |s| %>
     <%= s.label :studio_id %>
     <%= s.collection_select :studio_id, @studios, :id, :name %>
