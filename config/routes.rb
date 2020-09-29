@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :schedules
   resources :users
   get "/studios/:id", to: "studios#show", as: "studio"
+  get "/engineers/:id", to: "engineers#show", as: "engineer"
   # get "/schedules/new", to: "schedules#new", as: "new_schedule"
   # post "/schedules", to: "schedules#create"
 end
