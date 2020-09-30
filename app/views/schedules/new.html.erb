@@ -7,6 +7,10 @@
 <%end%>
 
 <%= form_for @schedule do |s| %>
+    <%= s.label :user_id %>
+    <%= @session %>
+    
+    <br>
     <%= s.label :studio_id %>
     <%= s.collection_select :studio_id, @studios, :id, :name %>
     <%= s.label :engineer_id %>

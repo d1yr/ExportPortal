@@ -12,9 +12,11 @@ class SchedulesController < ApplicationController
         @schedule = Schedule.new
         @studios = Studio.all
         @engineers = Engineer.all
+        @session = session[:user]
     end
 
     def create 
+        
         schedule = Schedule.create(schedule_params)
         if schedule.valid?
             redirect_to user_path(schedule.user) #?

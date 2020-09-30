@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+h1{
+    color: #534f5b;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 36px;
+    padding:1px;
+    margin: 3px;
+    line-height:100px;
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.25);
+    width:310px;
+    float:center;
+
+}
+body{
+    background-image: linear-gradient(to right, #ff9999, #99ddff);
+    color: #030553;
+    font-family: verdana;
+}
+li:nth-child(odd) { background: #ffc34d; color: #ffffff; box-shadow: 10px 10px 5px #888888; }
+li{
+    margin: 1em
+}
