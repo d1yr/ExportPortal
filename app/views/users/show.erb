@@ -5,10 +5,12 @@
 <ul>
 <h3>Appointment Date(s)</h3>
 <%@user.schedules.each do |s|%>
-<li><%= s.date %></li>
+<li><%=link_to s.date, schedule_path(s) %></li>
 <% end%>
 </ul>
 
 <%= button_to "Edit", edit_user_path(@user.id), method: :get %>
 
-<%= button_to "Cancel", user_path(@user.id), method: :delete %>
+<%= button_to "Delete Account", user_path(@user.id), method: :delete %>
+
+<%= button_to "Create Appointment", new_schedule_path, method: :get %>

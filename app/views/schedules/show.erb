@@ -1,8 +1,10 @@
 <h1>Appointment</h1>
-<h3>User: <%=@schedule.user.name%></h3>
+<h3>User: <%=link_to @schedule.user.name, user_path(@schedule.user)%></h3>
 <ul>
 <li> Date: <%=@schedule.date%></li>
 <li>Time reserved: <%=@schedule.time%></li>
+<li>Studio: <%=link_to @schedule.studio.name, studio_path(@schedule.studio)%></li>
+<li>Engineer: <%=link_to @schedule.engineer.name, engineer_path(@schedule.engineer)%></li>
 </ul>
 
 <%= button_to "Edit", edit_schedule_path(@schedule.id), method: :get %>
