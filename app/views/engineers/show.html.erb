@@ -1,2 +1,19 @@
+<nav>
+  <ul>
+    <li>
+    <a href=<%=user_path(@session)%>>Home</a>
+    </li>
+    <li>
+      <a href="/studios">Studios</a>
+    </li>
+    <li>
+      <a href="/engineers">Engineers</a>
+    </li>
+    <li>
+      <a href="#">Log Out</a>
+    </li>
+  </ul>
+</nav>
+
 <h1><%= @engineer.name %></h1>
 <li><%= @engineer.bio %></li>

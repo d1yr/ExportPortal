@@ -1,3 +1,20 @@
+<nav>
+  <ul>
+    <li>
+    <a href=<%=user_path(@session)%>>Home</a>
+    </li>
+    <li>
+      <a href="/studios">Studios</a>
+    </li>
+    <li>
+      <a href="/engineers">Engineers</a>
+    </li>
+    <li>
+      <a href="#">Log Out</a>
+    </li>
+  </ul>
+</nav>
+
 <h1>Book time with us!</h1>
 
 <%if flash[:my_errors]%>
