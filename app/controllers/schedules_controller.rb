@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
     before_action :find_schedule, only: [:show, :edit, :update, :destroy]
-   
+    skip_before_action :authorized, only: [:show, :index]
     def index
         @schedules = Schedule.all
     end

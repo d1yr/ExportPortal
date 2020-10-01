@@ -7,8 +7,8 @@
 <%end%>
 
 <%= form_for @schedule do |s| %>
-    <%= s.label :user_id %>
-    <%= @session %>
+    <%= @current_user.name %>
+    <%= s.hidden_field :user_id, value: session[:user] %>
     
     <br>
     <%= s.label :studio_id %>
