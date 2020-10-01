@@ -1,5 +1,6 @@
 class SchedulesController < ApplicationController
     before_action :find_schedule, only: [:show, :edit, :update, :destroy]
+    before_action :session_record, only: [:index, :show, :edit, :new]
     skip_before_action :authorized, only: [:show, :index]
     def index
         @schedules = Schedule.all
@@ -12,7 +13,7 @@ class SchedulesController < ApplicationController
         @schedule = Schedule.new
         @studios = Studio.all
         @engineers = Engineer.all
-        @session = session[:user]
+        #@session = session[:user]
     end
 
     def create 
@@ -46,6 +47,10 @@ class SchedulesController < ApplicationController
         
     
     private 
+
+    def session_record
+        @session = session[:user]
+    end
     
     def find_schedule
         @schedule = Schedule.find(params[:id])

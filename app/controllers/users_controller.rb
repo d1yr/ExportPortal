@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
     before_action :find_user, only: [:show, :edit, :update, :destroy]
+    before_action :session_record, only: [:show, :index, :edit]
     skip_before_action :authorized, only: [:new, :create, :login, :handle_login]
     
     def index
         @users = User.all
+        #@session = session[:user]
     end
     def show
         # @user = User.find(params[:id])
-        @session = session[:user]
+        #@session = session[:user]
     end
 
     def new
@@ -30,6 +32,7 @@ class UsersController < ApplicationController
     def edit
         @studios = Studio.all
         @engineers = Engineer.all
+        #@session = session[:user]
     end
 
     def update
@@ -66,6 +69,10 @@ class UsersController < ApplicationController
     
     private 
     
+    def session_record
+        @session = session[:user]
+    end
+
     def find_user
         @user = User.find(params[:id])
     end
