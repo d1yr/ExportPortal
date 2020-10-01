@@ -1,3 +1,20 @@
+<nav>
+  <ul>
+    <li>
+      <a href=user_path(@currentuser)>Home</a>
+    </li>
+    <li>
+      <a href="/studios">Studios</a>
+    </li>
+    <li>
+      <a href="/engineers">Engineers</a>
+    </li>
+    <li>
+      <a href="#">Log Out</a>
+    </li>
+  </ul>
+</nav>
+
 <%if flash[:message]%>
     <%flash[:message].each do |e|%>
         <p><%=e%></p>

@@ -4,5 +4,6 @@ class EngineersController < ApplicationController
     end
     def show 
         @engineer = Engineer.find(params[:id])
+        @session = session[:user]
     end
 end

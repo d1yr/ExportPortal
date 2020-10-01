@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     end
     def show
         # @user = User.find(params[:id])
+        @session = session[:user]
     end
 
     def new
@@ -18,7 +19,7 @@ class UsersController < ApplicationController
     def create 
         user = User.create(user_params)
         if user.valid?
-            redirect_to user_path(user)
+            redirect_to login_path
         else
             flash[:my_errors] = user.errors.full_messages
             redirect_to new_user_path
@@ -50,7 +51,7 @@ class UsersController < ApplicationController
         @user = User.find_by(name: params[:name])
         if @user && @user.authenticate(params[:password])
             session[:user] = @user.id
-            redirect_to users_path
+            redirect_to user_path(@user.id)
         else
             flash[:message] = @user.errors.full_messages
             redirect_to login_path

@@ -4,5 +4,6 @@ class StudiosController < ApplicationController
     end
     def show
         @studio = Studio.find(params[:id])
+        @session = session[:user]
     end
 end
