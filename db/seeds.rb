@@ -14,9 +14,13 @@
 #    User.create(name: Faker::Artist.name, email: Faker::Internet.email, password_digest: "abc123")
 #end
 
+
+
 #30.times do
 #    Engineer.create(name: Faker::DcComics.name, bio: Faker::ChuckNorris.fact)
 #end
+
+Engineer.create(name: "Swisha", bio: )
 
 #10.times do 
 #    Studio.create(name: Faker::Company.name, location: Faker::Address.full_address, info: Faker::ChuckNorris.fact)

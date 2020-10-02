@@ -22,9 +22,9 @@
 </ul>
 <ul>
 
-<h3>Appointment Date(s)</h3>
+<h3>Appointments</h3>
 <%@user.schedules.each do |s|%>
-<li><%=link_to "#{s.date}", schedule_path(s) %></li>
+<li><%=link_to "#{s.studio.name} - #{s.date}", schedule_path(s) %></li>
 <% end%>
 </ul>
 
