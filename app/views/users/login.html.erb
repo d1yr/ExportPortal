@@ -1,10 +1,12 @@
-<nav>
+<nav> <h2>PORTAL</h2>
   <ul>
-  <% if @session == nil %>
-  <%=link_to "Home", login_path%>
-  <% else %>
-  <%= link_to "Home", user_path(@session)%>
-  <%end%>
+    <li>
+      <% if @session == nil %>
+      <a href=<%=login_path%>>Home</a>
+      <% else %>
+      <a href=<%=user_path(@session)%>>Home</a>
+      <%end%>
+    </li>
     <li>
       <a href="/studios">Studios</a>
     </li>
@@ -17,11 +19,7 @@
   </ul>
 </nav>
 
-<%if flash[:message]%>
-    <%flash[:message].each do |e|%>
-        <p><%=e%></p>
-     <%end%>
-<%end%>
+
 <h1>LOGIN</h1>
 <br>
 <%= form_tag "/login" do  %>
@@ -34,3 +32,5 @@
     <br>
     <%= submit_tag "Log in!" %>
 <% end %>
+<p> Not a member?</p>
+<a href="/users/new">SIGN UP</a>

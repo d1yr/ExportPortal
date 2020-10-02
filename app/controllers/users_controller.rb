@@ -52,11 +52,11 @@ class UsersController < ApplicationController
 
     def handle_login
         @user = User.find_by(name: params[:name])
-        if @user && @user.authenticate(params[:password])
+        if @user && @user.authenticate(params[:password]) 
             session[:user] = @user.id
             redirect_to user_path(@user.id)
         else
-            flash[:message] = @user.errors.full_messages
+            
             redirect_to login_path
         end
     end

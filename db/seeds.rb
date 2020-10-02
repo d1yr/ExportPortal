@@ -20,7 +20,16 @@
 #    Engineer.create(name: Faker::DcComics.name, bio: Faker::ChuckNorris.fact)
 #end
 
-Engineer.create(name: "Swisha", bio: )
+Engineer.create(name: "Alex S", bio: "A NY multimedia artist born and based in NYC, offers mixdown services, lessons, and engineering. Recent appearances in: Mixmag, Bandcamp Daily, LaidOffNYC" )
+Engineer.create(name: "Isaac S", bio: "Better known as DJ SWISHA, this Los Angeles born artist offers mixdown, engineering, mastering, recording, and lessons as services. Recent appearances in: Bandcamp Daily, Earmilk, Nowadays")
+Engineer.create(name: "Reynaldo H", bio: "IF BASS MADE THE BEAT U KNO IT SLAPP!!!")
+Engineer.create(name: "Jaryd K", bio: "Jaryd is a multi-genre producer, engineer, and dj. He specializes in working with textured, harsh sounds. His background in club music gives a very present feeling to his mixes and masters.")
+Engineer.create(name: "Lars P", bio: "One of the founders of Swim Team, and the founder of Towhead recordings. Offers engineering, mixdown, and mastering services")
+Engineer.create(name: "Jon K", bio: "KANYON SOUND. ASK FOR SERVICES INFO.")
+
+
+Studio.create(name: "EXG PORTAL", location: "317 Rutledge, Brooklyn, NY", info: "Large Studio, can accomodate up to six people working simultaneously. Equipment includes, but is not limited to: Apollo Firewire interface, Soundcraft 16 channel mixer /w inboard fx, Kali IN8 3-way monitors, JBL SW10 subwoofer, 32-inch main flatscreen, 24-inch recording area flatscreen, ceiling mounted mic boom, Shure sm57 line mic, Rode NT-1 recording mic, soundproof curtains, Roland TR-8S, MC-505, & TR-8, Akai MPC 1000, Arturia Mininova, Korg Wavestation EX, Microkorg XL, Monologue, full Pioneer Nexus dj setup.")
+Studio.create(name: "DUNGEON PORTAL", location: "286 Stanhope", info: "You Get What You Pay For!")
 
 #10.times do 
 #    Studio.create(name: Faker::Company.name, location: Faker::Address.full_address, info: Faker::ChuckNorris.fact)

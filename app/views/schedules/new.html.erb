@@ -1,11 +1,7 @@
-<nav>
+<nav> <h2>PORTAL</h2>
   <ul>
     <li>
-    <% if @session == nil %>
-      <%=link_to "Home", login_path%>
-      <% else %>
-      <%= link_to "Home", user_path(@session)%>
-      <%end%>
+    <a href=<%=user_path(@session)%>>Home</a>
     </li>
     <li>
       <a href="/studios">Studios</a>
