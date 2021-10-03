@@ -102,3 +102,9 @@ h3 { background-image: url("https://i.ibb.co/DLYW7kf/britedit-copy.jpg"); color:
 h3{
   margin: 1em
 }
+.button {
+  background-color: #030553;
+  color: white;
+  font-family: verdana;
+  font-style: bold;
+}
